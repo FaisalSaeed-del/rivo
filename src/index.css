@@ -13,7 +13,7 @@ body {
   font-family: "Rufina", serif;
 }
 .container {
-  @apply max-w-[1440px] p-4;
+  @apply max-w-[1440px] p-4 mx-auto;
 }
 .wrapper {
   background: #c2efd4;

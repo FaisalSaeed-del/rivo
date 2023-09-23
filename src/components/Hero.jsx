@@ -1,5 +1,6 @@
 import React from "react";
 import Main from "../assets/hero.png";
+import Dotted from "../assets/dotted.svg"
 
 const Hero = () => {
   return (
@@ -14,10 +15,15 @@ const Hero = () => {
               Explore our curated collection of stylish clothing and accessories
               tailored to your unique taste.
             </p>
-            <button className="bg-[#224F34] py-3 px-8 text-[#FFF] font-medium text-xl uppercase">Explore Now</button>
+            <button className="bg-[#224F34] py-3 px-8 text-[#FFF] font-medium text-xl uppercase">
+              Explore Now
+            </button>
           </div>
-          <div className="hero-bg  ">
+          <div className="hero-bg relative ">
             <img src={Main} alt="" />
+            <div className="absolute bottom-12 left-6">
+              <img src={Dotted} alt="" />
+            </div>
           </div>
         </div>
       </div>

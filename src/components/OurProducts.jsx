@@ -8,6 +8,7 @@ import Product_five from "../assets/product_five.png";
 
 const OurProducts = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
+  const [showCategories, setShowCategories] = useState(true); // Initially show categories on large screens
 
   const products = [
     {
@@ -52,7 +53,6 @@ const OurProducts = () => {
       rating: 5.0,
       category: "Accessories",
     },
-        
   ];
 
   const filteredProducts =
@@ -62,23 +62,38 @@ const OurProducts = () => {
 
   const categories = ["All", "Sale", "Hot", "New Arrivals", "Accessories"];
 
+  const handleToggleCategories = () => {
+    setShowCategories(!showCategories);
+  };
+
   return (
     <div className="bg-white pt-32">
       <div className="container">
-        <h1 className="text-[#224F34] text-[50px] font-medium text-center mb-10">Our products</h1>
-        <div className="flex justify-center flex-wrap gap-20 mb-20">
-          {categories.map((category, index) => (
-            <span
-              key={index}
-              onClick={() => setSelectedCategory(category)}
-              className={`cursor-pointer ${
-                selectedCategory === category ? "underline underline-offset-2" : ""
-              }`}
-            >
-              {category}
-            </span>
-          ))}
-        </div>
+        <h1 className="text-[#224F34] text-[50px] font-medium text-center mb-10">
+          Our products
+        </h1>
+        {showCategories ? (
+          <div className="flex justify-center flex-wrap gap-20 mb-20">
+            {categories.map((category, index) => (
+              <span
+                key={index}
+                onClick={() => setSelectedCategory(category)}
+                className={`cursor-pointer ${
+                  selectedCategory === category ? "underline underline-offset-4 text-[#224F34]" : ""
+                }`}
+              >
+                {category}
+              </span>
+            ))}
+          </div>
+        ) : (
+          <button
+            className="cursor-pointer underline underline-offset-2"
+            onClick={handleToggleCategories}
+          >
+            Show Categories
+          </button>
+        )}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {filteredProducts.map((product, index) => (
             <div key={index} className="text-center">
@@ -101,7 +116,6 @@ const OurProducts = () => {
             </div>
           ))}
         </div>
-
       </div>
     </div>
   );

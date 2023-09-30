@@ -23,10 +23,9 @@ const MobileResponsive = () => {
         onClose={toggleDrawer}
         direction="right"
         className="bla bla bla"
-        overlayColor="#c2efd4"
       >
-        <div className="flex gap-[46px] items-center flex-col py-10 bg-[#6bc785]">
-          <nav className="flex gap-[46px] items-cetner flex-col text-white">
+        <div className="flex gap-[46px] items-center flex-col py-10 bg-[#6bc785] min-h-screen">
+          <nav className="flex gap-[46px] items-cetner flex-col">
             <a href="#">Home</a>
             <a href="#">About</a>
             <a href="#">Features</a>

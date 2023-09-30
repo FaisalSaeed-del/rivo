@@ -4,6 +4,7 @@ import MobileResponsive from "./components/MobileResponsive";
 import Hero from "./components/Hero";
 import BestSelling from "./components/BestSelling";
 import OurProducts from "./components/OurProducts";
+import ExclusiveOffers from "./components/ExclusiveOffers";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
       <Hero/>
       <BestSelling/>
       <OurProducts/>
+      <ExclusiveOffers/>
     </div>
   );
 };

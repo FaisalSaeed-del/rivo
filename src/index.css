@@ -36,3 +36,8 @@ nav > a:hover {
   border-radius: 141px 45px 150px 82px;
   background: #6bc785;
 }
+.main_wrapper{
+  background-color: #C2EFD4;
+  max-width: 1310px;
+  margin: auto;
+}

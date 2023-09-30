@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <div className="bg-[#224F34]">
       <div className="container mt-32">
-        <div className="flex justify-around items-start py-10 px-10">
+        <div className="flex-col md:flex md:flex-row  justify-around items-start py-10 px-10">
           <div>
             <div>
               <h3 className="text-[#FFF] font-bold text-[50px]">Rivo</h3>
@@ -50,10 +50,22 @@ const Footer = () => {
           <div className="flex flex-col gap-4 footer-items">
             <a href="">Stay up to date</a>
             <div className="border-[#A3F3BE] border-2">
-            <input className="bg-transparent " type="text" placeholder="Enter your email"/>
-            <button className="text-black py-2 px-2 text-base font-medium bg-[#A3F3BE]">submit</button>
+              <input
+                className="bg-transparent "
+                type="text"
+                placeholder="Enter your email"
+              />
+              <button className="text-black py-2 px-2 text-base font-medium bg-[#A3F3BE]">
+                SUBMIT
+              </button>
             </div>
           </div>
+        </div>
+        <div className="flex justify-around items-center footer-items">
+          <div className="border-[#A3F3BE] w-[50%] border-b-2"></div>
+          <span className="">Terms</span>
+          <span className="">Privacy</span>
+          <span className="">Cookies</span>
         </div>
       </div>
     </div>

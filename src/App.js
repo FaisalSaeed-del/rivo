@@ -3,6 +3,7 @@ import Nvabar from "./components/Nvabar";
 import MobileResponsive from "./components/MobileResponsive";
 import Hero from "./components/Hero";
 import BestSelling from "./components/BestSelling";
+import OurProducts from "./components/OurProducts";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
       </div>
       <Hero/>
       <BestSelling/>
+      <OurProducts/>
     </div>
   );
 };

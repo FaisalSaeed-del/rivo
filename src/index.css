@@ -69,3 +69,45 @@ font-weight: 400;
 line-height: normal;
 padding-left: 10px;
 }
+
+
+/* Preloader styles with 3D effect */
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  perspective: 1000px; /* Create a 3D perspective container */
+}
+
+.loader {
+  width: 50px;
+  height: 50px;
+  transform-style: preserve-3d; /* Enable 3D transformations */
+  animation: spin 2s linear infinite;
+}
+
+.loader div {
+  width: 50px;
+  height: 50px;
+  background: #224F34;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: spin 2s linear infinite reverse; /* Reverse the rotation for the inner element */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}

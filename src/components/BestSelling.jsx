@@ -6,6 +6,7 @@ import IMG_two from "../assets/selling2.png";
 
 const BestSelling = () => {
   const [showAll, setShowAll] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const products = [
     {
@@ -80,12 +81,16 @@ const BestSelling = () => {
       price: "$38.99",
       rating: 5.0,
     },
-    // Add more product objects as needed
+    
   ];
 
   // Handle the "See All" button click
   const handleSeeAllClick = () => {
-    setShowAll(!showAll);
+    setIsLoading(true); // Set loading state to true
+    setTimeout(() => {
+      setShowAll(!showAll);
+      setIsLoading(false); // Set loading state to false after a delay (simulating loading)
+    }, 1000); // Adjust the delay time as needed
   };
 
   return (
@@ -99,7 +104,11 @@ const BestSelling = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10 place-items-center mb-10">
         {products.slice(0, showAll ? products.length : 3).map((product, index) => (
           <div key={index}>
-            <img className="bg-[#A9D4BA]" src={product.image} alt="" />
+            <img
+              className={`bg-[#A9D4BA] ${isLoading ? "opacity-0" : "opacity-100"}`}
+              src={product.image}
+              alt=""
+            />
             <div className="flex flex-col justify-center items-center">
               <h3 className="text-[22px] font-semibold text-black text-center">
                 {product.name}
@@ -121,9 +130,16 @@ const BestSelling = () => {
       <button
         className="flex items-center gap-4 py-2 px-10 bg-transparent border-2 border-black m-auto"
         onClick={handleSeeAllClick}
+        disabled={isLoading} // Disable the button while loading
       >
-        {showAll ? "See Less" : "See All"}
-        <BsArrowRight />
+        {isLoading ? (
+          <div className="animate-spin rounded-full h-6 w-6 border-t-2 border-b-2 border-black" />
+        ) : (
+          <>
+            {showAll ? "See Less" : "See All"}
+            <BsArrowRight />
+          </>
+        )}
       </button>
     </div>
   );

@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <div className="bg-[#224F34]">
       <div className="container mt-32">
-        <div className="flex-col md:flex md:flex-row  justify-around items-start py-10 px-10">
+        <div className="grid grdi-cols-2 md:grid-cols-4 place-items-center py-10 px-10">
           <div>
             <div>
               <h3 className="text-[#FFF] font-bold text-[50px]">Rivo</h3>
@@ -28,25 +28,19 @@ const Footer = () => {
           </div>
           <div className="flex flex-col gap-2 footer-items">
             <a>SHOP</a>
-            <span>SHOP</span>
-            <span>SHOP</span>
-            <span>SHOP</span>
-            <span>SHOP</span>
+            <span>Products</span>
+            <span>Overview</span>
+            <span>Pricing</span>
+            <span>Releases</span>
           </div>
           <div className="flex flex-col gap-2 footer-items">
-            <a>SHOP</a>
-            <span>SHOP</span>
-            <span>SHOP</span>
-            <span>SHOP</span>
-            <span>SHOP</span>
+            <a>Company</a>
+            <span>About us</span>
+            <span>Contact</span>
+            <span>News</span>
+            <span>Support</span>
           </div>
-          <div className="flex flex-col gap-2 footer-items">
-            <a>SHOP</a>
-            <span>SHOP</span>
-            <span>SHOP</span>
-            <span>SHOP</span>
-            <span>SHOP</span>
-          </div>
+          
           <div className="flex flex-col gap-4 footer-items">
             <a href="">Stay up to date</a>
             <div className="border-[#A3F3BE] border-2">

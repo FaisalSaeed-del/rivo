@@ -36,8 +36,36 @@ nav > a:hover {
   border-radius: 141px 45px 150px 82px;
   background: #6bc785;
 }
-.main_wrapper{
-  background-color: #C2EFD4;
+.main_wrapper {
+  background-color: #c2efd4;
   max-width: 1310px;
   margin: auto;
+}
+.footer-items > a {
+  color: #fff;
+  font-family: Roboto Slab;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.footer-items > span {
+  color: #c2efd4;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+::placeholder{
+color: #FFF;
+font-family: Poppins;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+padding-left: 10px;
 }

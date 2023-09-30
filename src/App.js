@@ -5,6 +5,9 @@ import Hero from "./components/Hero";
 import BestSelling from "./components/BestSelling";
 import OurProducts from "./components/OurProducts";
 import ExclusiveOffers from "./components/ExclusiveOffers";
+import Designer from "./components/Designer";
+import FeedbackCorner from "./components/FeedbackCorner";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -19,6 +22,9 @@ const App = () => {
       <BestSelling/>
       <OurProducts/>
       <ExclusiveOffers/>
+      <Designer/>
+      <FeedbackCorner/>
+      <Footer/>
     </div>
   );
 };

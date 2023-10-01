@@ -6,8 +6,8 @@ const Hero = () => {
   return (
     <div className="wrapper">
       <div className="container">
-        <div className="flex justify-between flex-wrap px-10 pt-[139px]">
-          <div className="flex flex-col items-start gap-10">
+        <div className="flex justify-between flex-wrap px-10 pt-20 md:pt-[139px]">
+          <div className="flex flex-col md:items-start mb-10 md:mb-0 gap-10">
             <h1 className="md:text-[86px] text-[32px] font-bold text-[#224F34] max-w-[640px]">
               Discover and Find Your Own Fashion!
             </h1>
